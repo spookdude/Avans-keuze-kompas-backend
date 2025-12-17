@@ -10,7 +10,7 @@ export class CreateAiDto {
     @IsNumber()
     max_difficulty: number;
 
-    @IsString()
+    @IsString({ each: true })
     role_include: string[];
 
     @IsString()
